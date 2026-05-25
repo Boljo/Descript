@@ -1,0 +1,13 @@
+name: Analyze PR
+on:
+  pull_request:
+permissions:
+  pull-requests: write
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/pr-analyzer
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
