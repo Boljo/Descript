@@ -7,7 +7,8 @@ GITHUB_API = "https://api.github.com"
 
 
 def main():
-    token = os.environ["INPUT_GITHUB-TOKEN".replace("-", "_")]  # INPUT_GITHUB_TOKEN
+    
+    token = os.environ["INPUT_GITHUB_TOKEN"]
 
     with open(os.environ["GITHUB_EVENT_PATH"]) as f:
         event = json.load(f)

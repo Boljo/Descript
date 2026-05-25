@@ -2,7 +2,7 @@
 name: "PR Analyzer"
 description: "Analyzes a pull request and comments a summary."
 inputs:
-  github-token:
+  github_token:
     description: "Token for API access"
     required: true
 runs:
