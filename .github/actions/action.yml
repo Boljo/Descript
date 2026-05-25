@@ -1,0 +1,14 @@
+
+name: "PR Analyzer"
+description: "Analyzes a pull request and comments a summary."
+inputs:
+  github-token:
+    description: "Token for API access"
+    required: true
+runs:
+  using: "docker"
+  image: "Dockerfile"
+
+  #test
+
+
