@@ -8,6 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: ./.github/actions/pr-analyzer
+      - uses: ./.github/actions/Descriptor
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
