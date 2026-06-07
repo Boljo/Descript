@@ -11,3 +11,4 @@ jobs:
       - uses: ./.github/actions/Descriptor
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}

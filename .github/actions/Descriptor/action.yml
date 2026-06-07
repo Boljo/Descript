@@ -1,14 +1,14 @@
-
 name: "PR Analyzer"
 description: "Analyzes a pull request and comments a summary."
 inputs:
   github_token:
     description: "Token for API access"
     required: true
+  anthropic_api_key:
+    description: "Anthropic API key"
+    required: true
 runs:
   using: "docker"
   image: "Dockerfile"
-
-  #test
-
-
+  env:
+    ANTHROPIC_API_KEY: ${{ inputs.anthropic_api_key }}
