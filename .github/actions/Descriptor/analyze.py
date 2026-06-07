@@ -6,7 +6,7 @@ import anthropic
 
 GITHUB_API = "https://api.github.com"
 
-client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
+client = anthropic.Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY") or os.environ["INPUT_ANTHROPIC_API_KEY"])
 
 with open(os.path.join(os.path.dirname(__file__), "system_prompt.md")) as _f:
     SYSTEM_PROMPT = _f.read().strip()
