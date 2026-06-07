@@ -43,7 +43,7 @@ def main():
     diff = "\n\n".join(f"--- {f['filename']} ---\n{f.get('patch', '(binary)')}" for f in files)
 
     message = client.messages.create(
-        model="claude-sonnet-4-20250514",
+        model="claude-sonnet-4-6",
         max_tokens=2048,
         system=SYSTEM_PROMPT,
         messages=[{"role": "user", "content": f"{metadata}\n\n```\n{diff[:80000]}\n```"}],
